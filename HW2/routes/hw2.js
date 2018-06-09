@@ -41,7 +41,6 @@ router.delete('/:string', function(req, res) {
         else {
             stringss.remove({string : req.params.string, length : req.params.string.length}).then(() => res.json("Document has been removed."))
         }
-        // res.json("Document has been removed.")
     })
 })
 

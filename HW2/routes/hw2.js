@@ -28,7 +28,6 @@ router.post('/', function(req, res) {
     stringss.findOneAndUpdate({string : Object.keys(req.body)[0]}, {length : Object.keys(req.body)[0].length}, {upsert:true, new:true}, function(err,strings){
         res.json("string : " + strings.string + ", length : " + strings.length)
     })
-    // res.json({"string" : Object.keys(req.body)[0], "length" : Object.keys(req.body)[0].length});
 })
 
 router.delete('/:string', function(req, res) {
